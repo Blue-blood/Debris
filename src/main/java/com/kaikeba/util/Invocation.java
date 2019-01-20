@@ -43,7 +43,7 @@ public class Invocation implements InvocationHandler{
 
 	private void init(String sql)throws Exception{
 		Class.forName("com.mysql.jdbc.Driver");
-		connection = (Connection) DriverManager.getConnection("jdbc:mysql://198.181.46.192:3306/test", "root", "TianFang0203.");
+		connection = (Connection) DriverManager.getConnection("jdbc:mysql://local:3306/test", "root", "root");
 		ps = (PreparedStatement) connection.prepareStatement(sql);
 	}
 	private void close() throws SQLException{
